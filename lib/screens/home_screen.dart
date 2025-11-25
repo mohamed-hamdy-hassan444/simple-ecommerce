@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:simple_ecommerce/widgets/item_details.dart';
+import 'package:simple_ecommerce/widgets/custom_ink_well.dart';
+
 import 'package:simple_ecommerce/widgets/custom_bottom_nav_bar.dart';
-import 'package:simple_ecommerce/widgets/card_item.dart';
 import 'package:simple_ecommerce/widgets/categories_list.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -102,31 +102,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-class CustomInkWell extends StatelessWidget {
-  final String img;
-  final String name;
-  final String price;
-  const CustomInkWell({
-    super.key,
-    required this.img,
-    required this.name,
-    required this.price,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) =>
-                ItemDetails(img: img, name: name, price: price),
-          ),
-        );
-      },
-      child: CardItem(imgUrl: img, name: name, price: price),
-    );
-  }
-}
-

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:simple_ecommerce/widgets/custom_bottom_nav_bar.dart';
 
-class ItemDetails extends StatefulWidget {
+class ItemDetailsScreen extends StatefulWidget {
   final String img;
   final String name;
   final String? type;
   final String price;
 
-  const ItemDetails({
+  const ItemDetailsScreen({
     super.key,
     required this.img,
     required this.name,
@@ -16,10 +16,10 @@ class ItemDetails extends StatefulWidget {
   });
 
   @override
-  State<ItemDetails> createState() => _ItemDetailsState();
+  State<ItemDetailsScreen> createState() => _ItemDetailsState();
 }
 
-class _ItemDetailsState extends State<ItemDetails> {
+class _ItemDetailsState extends State<ItemDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     int currentindex = 0;
@@ -154,27 +154,4 @@ class _ItemDetailsState extends State<ItemDetails> {
   }
 }
 
-  // BottomNavigationBar(
-  //       currentIndex: currentindex,
-  //       onTap: (value) {
-  //         setState(() {
-  //           currentindex = value;
-  //         });
-  //       },
-  //       selectedItemColor: Colors.deepOrange,
-  //       iconSize: 40,
-  //       items: [
-  //         BottomNavigationBarItem(
-  //           icon: Icon(Icons.home_outlined),
-  //           label: "Home",
-  //         ),
-  //         BottomNavigationBarItem(
-  //           icon: Icon(Icons.shopping_bag_outlined),
-  //           label: "Market",
-  //         ),
-  //         BottomNavigationBarItem(
-  //           icon: Icon(Icons.person_outline),
-  //           label: "Profile",
-  //         ),
-  //       ],
-  //     ),
+  
